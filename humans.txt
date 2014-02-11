@@ -1,15 +1,18 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
+/* TEAM */
+	
+	Lead Developer: Dallas John Slieker
+	Contact: dslieker [at] gmail.com
+	Twitter: @dslieker
+	GitHub: dsliek
+	Minecraft: defmethod
+	From: Colorado Springs, CO
 
-# TEAM
+/* THANKS */
 
-    <name> -- <role> -- <twitter>
+	Lead Tester: Zleck		
 
-# THANKS
+/* SITE */
 
-    <name>
-
-# TECHNOLOGY COLOPHON
-
-    HTML5, CSS3
-    Normalize.css, jQuery, Modernizr
+	Language: English
+	Doctype: HTML5
+	IDE: Sublime Text, Fireworks
