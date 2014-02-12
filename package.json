@@ -1,1 +1,19 @@
-package.json
+{
+  "name": "betaworld-website",
+  "version": "0.0.0",
+  "author": "Dallas John Slieker <dslieker@gmail.com>",
+  "description": "LifeOnBetaworld.com Website Generator",
+  "devDependencies": {
+    "stylus": "0.38.x",
+    "jade": "0.35.x",
+    "gulp": "3.5.x",
+    "gulp-util": "2.2.x",
+    "gulp-jshint": "1.4.x",
+    "gulp-minify-css": "0.3.x",
+    "gulp-jade": "0.4.x",
+    "gulp-grunt": "0.4.x",
+    "grunt": "0.4.x",
+    "grunt-complexity": "0.1.x",
+    "gulp-plumber": "~0.5.6"
+  }
+}
