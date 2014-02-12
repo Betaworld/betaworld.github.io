@@ -6,7 +6,6 @@ require('gulp-grunt')(gulp);
 var jade = require('gulp-jade');
 var jshint = require('gulp-jshint');
 var minifyCSS = require('gulp-minify-css');
-var plato = require('gulp-plato');
 
 var paths = {
   scripts: ['./assets/javascript/**.js'],
