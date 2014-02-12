@@ -1,5 +1,5 @@
 /* TEAM */
-	
+
 	Lead Developer: Dallas John Slieker
 	Contact: dslieker [at] gmail.com
 	Twitter: @dslieker
@@ -9,10 +9,13 @@
 
 /* THANKS */
 
-	Lead Tester: Zleck		
+	Lead Tester: Zleck
+
+  Tester: Alerlyking
 
 /* SITE */
 
+  Technology: node.js, browserfy, gulp, jade, stylus
 	Language: English
 	Doctype: HTML5
 	IDE: Sublime Text, Fireworks
