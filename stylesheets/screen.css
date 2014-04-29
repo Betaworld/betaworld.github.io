@@ -434,7 +434,7 @@ body > .chrome > .body > article.document {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 16px;
-  max-width: 896px;
+  max-width: 1104px;
   padding: 16px;
   -webkit-background-size: 32px 32px;
   -moz-background-size: 32px 32px;
@@ -481,7 +481,4 @@ body > .chrome > .body > article.document > section.page:after {
   height: 100%;
   z-index: -1;
   content: ' ';
-}
-#constitution {
-  max-width: 1104px;
 }
