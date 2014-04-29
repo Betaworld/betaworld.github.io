@@ -1,0 +1,444 @@
+/*
+ * Import nib
+ */
+/*
+ * Nib provides a CSS reset
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+/* Official proportions, don't mess with these */
+/* Official proportions, don't mess with these */
+/* Official proportions, don't mess with these */
+body {
+  background-color: #000;
+  background-image: url("/images/void.png");
+  color: #fff;
+  image-rendering: optimizeSpeed;
+/* FUCK SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;
+/* Firefox                        */
+  image-rendering: -o-crisp-edges;
+/* Opera                          */
+  image-rendering: -webkit-optimize-contrast;
+/* Chrome (and eventually Safari) */
+  image-rendering: optimize-contrast;
+/* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;
+/* IE8+                           */
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6,
+body p,
+body ul,
+body ol {
+  margin-bottom: 32px;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-size: 1.2em;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 0.1em 0.1em #000;
+  color: #f3d84b;
+  word-spacing: -5px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  line-height: 1.4em;
+}
+body h2 {
+  color: #ffff7e;
+  font-size: 1em;
+}
+body h3 {
+  color: #ffffb1;
+  font-size: 1em;
+}
+body p,
+body ol,
+body ul {
+  font-family: 'VT323', cursive;
+  text-shadow: 0.1em 0.1em #000;
+  font-size: 1.6em;
+}
+body ol {
+  list-style: decimal;
+  padding-left: 35px;
+}
+body ol li,
+body ul li {
+  margin-bottom: 0.1em;
+}
+body ul li:before {
+  content: "• ";
+  color: #f3d84b;
+}
+body a,
+body strong {
+  color: #f3d84b;
+}
+body > .chrome {
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/blocks/stone.png");
+  position: relative;
+  z-index: 1;
+}
+body > .chrome > .header {
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/gui/title/background/panorama_2.png");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 500px;
+  position: relative;
+}
+body > .chrome > .header section.logo {
+  max-width: 706px;
+  height: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 275px;
+}
+body > .chrome > .header section.logo img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+body > .chrome > .header section.navigation {
+  position: relative;
+  top: 283px;
+  width: 284px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 43.999999999999986px;
+}
+body > .chrome > .header section.navigation nav {
+  height: 43.999999999999986px;
+}
+body > .chrome > .header section.navigation nav > :first-child {
+  width: 42px;
+  background-position: 0 0;
+}
+body > .chrome > .header section.navigation nav > :first-child span {
+  width: 42px;
+}
+body > .chrome > .header section.navigation nav > :last-child {
+  width: 42px;
+  background-position: -322px 0;
+}
+body > .chrome > .header section.navigation nav > :last-child span {
+  width: 42px;
+}
+body > .chrome > .header section.navigation nav a {
+  text-indent: -9999px;
+  float: left;
+  display: block;
+  height: 43.999999999999986px;
+  width: 40px;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/gui/widgets.png");
+  -webkit-background-size: 512px 512px;
+  -moz-background-size: 512px 512px;
+  background-size: 512px 512px;
+  background-position: -42px 0;
+}
+body > .chrome > .header section.navigation nav a span {
+  display: block;
+  height: 43.999999999999986px;
+  width: 40px;
+  position: relative;
+}
+body > .chrome > .header section.navigation nav a.guide span {
+  background-repeat: no-repeat;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  background-size: 24px 24px;
+  background-position: center center;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/items/book_written.png");
+}
+body > .chrome > .header section.navigation nav a.constitution span {
+  background-repeat: no-repeat;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  background-size: 24px 24px;
+  background-position: center center;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/items/paper.png");
+}
+body > .chrome > .header section.navigation nav a.government span {
+  background-repeat: no-repeat;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  background-size: 24px 24px;
+  background-position: center center;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/items/apple_golden.png");
+}
+body > .chrome > .header section.navigation nav a.map span {
+  background-repeat: no-repeat;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  background-size: 24px 24px;
+  background-position: center center;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/items/map_filled.png");
+}
+body > .chrome > .header section.navigation nav a.economy span {
+  background-repeat: no-repeat;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  background-size: 24px 24px;
+  background-position: center center;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/items/diamond.png");
+}
+body > .chrome > .header section.navigation nav a.npc span {
+  background-repeat: no-repeat;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  background-size: 24px 24px;
+  background-position: center center;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/items/skull_steve.png");
+}
+body > .chrome > .header section.navigation nav a.factions span {
+  background-repeat: no-repeat;
+  -webkit-background-size: 24px 24px;
+  -moz-background-size: 24px 24px;
+  background-size: 24px 24px;
+  background-position: center center;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/items/stone_sword.png");
+}
+body > .chrome > .footer {
+  margin-bottom: 375px;
+  position: relative;
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/blocks/bedrock.png");
+  background-position: bottom left;
+  background-repeat: repeat-x;
+  z-index: 1;
+  padding: 32px;
+}
+body > .chrome > .footer > .information {
+  max-width: 896px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px;
+}
+body > .chrome > .footer > .information:after {
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.6));
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.6));
+  background: -o-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.6));
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.6));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.6));
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  content: ' ';
+}
+body > .chrome > .body:before {
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/blocks/grass_side.png");
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 32px;
+  content: ' ';
+  z-index: -1;
+}
+body > .chrome > .body:after {
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  background: -o-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  content: ' ';
+}
+body > .chrome > .body {
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/blocks/dirt.png");
+  position: relative;
+  z-index: 1;
+  padding: 16px;
+  padding-top: 24px;
+  -webkit-box-shadow: 0 -3px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 -3px 10px rgba(0,0,0,0.3);
+}
+body > .chrome > .body article.map {
+  position: relative;
+  padding-bottom: 60%;
+  height: 0px;
+  width: 100%;
+  margin-bottom: 32px;
+}
+body > .chrome > .body article.map iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/blocks/stonebrick.png");
+  -webkit-box-shadow: inset 0 0 20px #000;
+  box-shadow: inset 0 0 20px #000;
+}
+body > .chrome > .body > article.document {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  max-width: 896px;
+  padding: 16px;
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/blocks/stonebrick.png");
+  z-index: 1;
+  position: relative;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.75);
+  box-shadow: 0 0 10px rgba(0,0,0,0.75);
+}
+body > .chrome > .body > article.document > section.page {
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
+  background-image: url("/resource_packs/ovo/assets/minecraft/textures/blocks/stone.png");
+  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.75);
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.75);
+  z-index: 1;
+}
+body > .chrome > .body > article.document > section.page > section.body {
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.7));
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.7));
+  background: -o-linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.7));
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.6), rgba(0,0,0,0.7));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.7));
+  padding: 32px;
+  padding-bottom: 1px;
+}
+body > .chrome > .body > article.document > section.page:after {
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  background: -o-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  content: ' ';
+}

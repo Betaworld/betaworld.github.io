@@ -1,0 +1,350 @@
+@import 'nib'
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+//resource_pack = kop
+//resource_pack = faerielight
+//resource_pack = jammercraft
+//resource_pack = minewars
+//resource_pack = armous
+//resource_pack = k32
+//resource_pack = arcility
+resource_pack = fallenearth
+
+//resource_pack = default
+//resource_pack = adventuretime
+//resource_pack = sixtygig
+resource_pack = ovo
+//resource_pack = ozo
+//resource_pack = conquest
+//resource_pack = smoothic
+
+
+original-block-size = 16px
+
+block-scale = 2
+
+block-size = original-block-size * block-scale
+
+half-block-size = (block-size / 2)
+
+body-width = original-block-size * 56
+//body-width = 100%
+
+header-height = 500px
+footer-height = block-size * 3
+
+widget-size = 256px * 2
+widget-height = widget-size / 11.63636363636364 /* Official proportions, don't mess with these */
+widget-width = widget-size / 12.8 /* Official proportions, don't mess with these */
+widget-cap-width = widget-size / 12.19047619047619 /* Official proportions, don't mess with these */
+
+block-path(blockName)
+  return '../resource_packs/' + resource_pack + '/assets/minecraft/textures/blocks/' + blockName + '.png'
+
+block(blockName)
+  background-size block-size block-size
+  background-image url(block-path(blockName))
+
+item(itemName)
+  background-repeat no-repeat
+  background-size (original-block-size * 1.5) (original-block-size * 1.5)
+  background-position center center
+  background-image url('../resource_packs/' + resource_pack + '/assets/minecraft/textures/items/' + itemName + '.png')
+
+linear-shadow(startOpacity, endOpacity)
+  background linear-gradient(top, rgba(0,0,0,startOpacity), rgba(0,0,0,endOpacity))
+
+linear-shadow-overlay(startOpacity, endOpacity)
+  linear-shadow(startOpacity, endOpacity)
+  position absolute
+  left 0
+  top 0
+  width 100%
+  height 100%
+  z-index -1
+  content ' '
+
+text-texture(textureURL)
+  -webkit-mask-image url(textureURL)
+  -moz-mask-image url(textureURL)
+  -o-mask-image url(textureURL)
+  mask-image url(textureURL)
+
+body
+  background-color black
+  background-image url('../images/void.png')
+  color white
+
+  image-rendering: optimizeSpeed;             /* FUCK SMOOTHING, GIVE ME SPEED  */
+  image-rendering: -moz-crisp-edges;          /* Firefox                        */
+  image-rendering: -o-crisp-edges;            /* Opera                          */
+  image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+  image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+  -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+
+  code
+    //font-family monospace
+    background-color white
+    color black
+    text-shadow none
+    padding 2px
+
+  p, ul, ol
+    margin-bottom 1em
+    font-size 1.6em
+
+  h1, h2, h3, h4, h5, h6
+    font-family 'Press Start 2P', cursive
+    text-shadow 0.1em 0.1em #000
+    color #F3D84B
+    text-align center
+    text-transform uppercase
+    margin-bottom 1em
+    word-spacing -0.5em
+
+  h1
+    font-size 1.6em
+    margin-bottom 1em
+
+  h2
+    font-size 1.4em
+    margin-top 3em
+
+  h3
+    color #E1700E + #333
+    font-size 1.2em
+    margin-top 1em
+
+
+  h2, h3, h4, h5, h6
+    text-align left
+    //margin-top block-size * 1.5
+
+  p, ol, ul
+    font-family: 'VT323', cursive;
+    //font-family: 'Comfortaa', 'cursive';
+    //font-family: 'Open Sans Condensed', 'sans-serif';
+    //font-family: 'Dosis', 'sans-serif';
+    line-height: 1.04em
+    word-spacing: -0.1em
+    letter-spacing: 0.001em
+    //margin-top half-block-size
+    text-shadow: 0.1em 0.1em #000
+    
+    p, ol, ul
+      margin-top 0.5em
+      font-size 1.0em
+
+  ol
+    list-style decimal
+    padding-left 35px
+
+  ol, ul
+    margin-bottom 1em
+    li
+      margin-bottom 0.5em
+  ul
+    padding-left 35px
+    list-style square
+    li:before
+      color #F3D84B
+
+  a, strong
+    color #F3D84B
+
+  a:hover
+    color green
+
+  > .chrome
+    block('stone')
+    position relative
+    z-index 1
+    > .header
+      background-image url('../resource_packs/' + resource_pack + '/assets/minecraft/textures/gui/title/background/panorama_4.png')
+      background-size cover
+      background-position center center
+      background-repeat no-repeat
+      height header-height
+      position relative
+
+      section.logo
+        max-width 706px
+        height 140px
+        margin-left auto
+        margin-right auto
+        position relative
+        top 275px
+        img
+          position absolute
+          bottom 0
+          width 100%
+
+      section.navigation
+        //float left
+        position relative
+        top 283px
+        //left 50%
+        //bottom block-size
+        width 144px
+        margin-left auto
+        margin-right auto
+        height widget-height
+        nav
+          //box-shadow 0 0 10px rgba(0,0,0,0.5)
+          //float left
+          //background red
+          //position relative
+          //left -50%
+          //white-space nowrap
+          height widget-height
+          
+          > :first-child
+            width widget-cap-width
+            background-position 0 0
+            span
+              width widget-cap-width
+          > :last-child
+            width widget-cap-width
+            background-position - (widget-cap-width + (widget-width * 7)) 0
+            span
+              width widget-cap-width
+          a
+            text-indent -9999px
+            float left
+            display block
+            height widget-height
+            width widget-width
+            background-image url('../resource_packs/' + resource_pack + '/assets/minecraft/textures/gui/widgets.png')
+            background-size widget-size widget-size
+            background-position -(widget-cap-width) 0
+            span
+              display block
+              height widget-height
+              width widget-width
+              position relative
+              
+
+          a.guide
+            span
+              item('book_written')
+
+          a.constitution
+            span
+              item('paper')
+
+          a.government
+            span
+              item('apple_golden')
+
+          a.map
+            span
+              item('map_filled')
+
+          a.economy
+            span
+              item('diamond')
+
+          a.npc
+            span
+              item('skull_steve')
+
+          a.factions
+            span
+              item('stone_sword')
+
+    > .footer
+      //height footer-height
+      margin-bottom 375px
+      position relative
+      block('bedrock')
+      background-position bottom left
+      background-repeat repeat-x
+      z-index 1
+      padding 0px 32px 16px 32px
+      > .information
+        text-align center
+        font-size 0.7em
+        max-width body-width
+        margin-left auto
+        margin-right auto
+        //box-shadow 0 0 20px rgba(255,102,0,1)
+        padding (block-size / 2)
+        //block('lava_still')
+      > .information:after
+        linear-shadow-overlay(0.5,0.6)
+
+    > .body:before
+      block('grass_side')
+      background-repeat repeat-x
+      position absolute
+      top 0
+      left 0
+      width 100%
+      height block-size
+      content ' '
+      z-index -1
+    > .body:after
+      linear-shadow-overlay(0.4,0.7)
+    > .body
+      block('dirt')
+      position relative
+      z-index 1
+      padding half-block-size
+      padding-top block-size * 0.75
+      box-shadow 0 -3px 20px rgba(0,0,0,0.7)
+
+      article.map
+        position relative
+        padding-bottom 60%
+        height 0px
+        width 100%
+        margin-bottom block-size
+        iframe
+          position absolute
+          left 0;
+          top 0;
+          width 100%
+          height 100%
+          block('stonebrick')
+          box-shadow inset 0 0 20px rgba(0,0,0,1)
+
+      > article.document
+        margin-left auto
+        margin-right auto
+        margin-bottom half-block-size
+        max-width body-width
+        padding (block-size / 2)
+        block('stonebrick')
+        z-index 1
+        position relative
+        box-shadow 0 0 20px rgba(0,0,0,1)
+
+        > section.page
+          block('stone')
+          box-shadow inset 0 0 20px rgba(0,0,0,1)
+          //padding (block-size / 2)
+          z-index 1
+          
+          > section.body
+            linear-shadow 0.7 0.9
+            padding block-size
+            padding-bottom 1px
+
+            > article > p > img
+              width 100%
+              box-shadow 0 0 20px rgba(0,0,0,1)
+
+        > section.page:after
+          linear-shadow-overlay 0.3 0.5
+
+#constitution
+  max-width 1104px
+  h1
+    font-size 2em
+    margin-top 1em
+  h2, h3
+    text-align center

@@ -1,48 +1,52 @@
 var gulp = require('gulp');
-
-/* Using Gulp-Grunt To Access 'grunt-complexity' */
-require('gulp-grunt')(gulp);
-
 var jade = require('gulp-jade');
-var jshint = require('gulp-jshint');
-var minifyCSS = require('gulp-minify-css');
+var stylus = require('gulp-stylus');
+var minifyHtml = require('gulp-minify-html');
+var nib = require('nib');
+var clean = require('gulp-clean');
 
 var paths = {
-  scripts: ['./assets/javascript/**.js'],
-  jade: './assets/jade/**.jade',
-  stylus: './assets/stylus/**.stylus'
+  jade: './assets/jade/**/*.jade',
+  htmlDir: './',
+  html: './*.html',
+  stylus: './assets/stylus/*.styl',
+  stylesheetsDir: './stylesheets/',
+  stylesheets: './stylesheets/*.css'
 };
 
-(function setupGulp() {
+gulp.task('clean', function () {
+  return gulp.src([paths.html], {read: false})
+    .pipe(clean());
+});
 
-  'use strict';
+gulp.task('compile-html', ['clean'], function () {
+  var LOCALS = {};
 
-  gulp.task('lint', function () {
-    gulp.src('./assets/app/**.js', { read: false })
-      .pipe(jshint())
-      .pipe(jshint.reporter('default'));
-  });
+  return gulp.src(paths.jade)
+    .pipe(jade({
+      locals: LOCALS
+    }))
+    .pipe(gulp.dest(paths.htmlDir));
+});
 
-  gulp.task('templates', function () {
-    var YOUR_LOCALS = {};
+gulp.task('minify-html', ['compile-html'], function() {
+  var opts = {comments: false, spare: false};
 
-    gulp.src('./assets/jade/*.jade')
-      .pipe(jade({
-        locals: YOUR_LOCALS
-      }))
-      .pipe(gulp.dest('./dist/'));
-  });
+  gulp.src(paths.html)
+    .pipe(minifyHtml(opts))
+    .pipe(gulp.dest(paths.htmlDir));
+});
 
-  gulp.task('minify-css', function () {
-    gulp.src('./assets/css/*.css')
-      .pipe(minifyCSS())
-      .pipe(gulp.dest('./dist/'));
-  });
+gulp.task('compile-css', function () {
+  return gulp.src(paths.stylus)
+    .pipe(stylus({errors: true, use: [nib()]}))
+    .pipe(gulp.dest(paths.stylesheetsDir));
+});
 
-  gulp.task('watch', function () {
-    gulp.watch(paths.scripts, ['lint']);
-  });
+// Watch Our Files
+gulp.task('watch', function() {
+  gulp.watch([paths.jade, paths.stylus], ['compile-html', 'minify-html', 'compile-css']);
+});
 
-  gulp.task('default', ['lint', 'grunt-complexity']);
-
-})();
+// Default
+gulp.task('default', ['compile-html', 'minify-html', 'compile-css', 'watch']);

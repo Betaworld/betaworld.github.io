@@ -1,18 +1,35 @@
 {
-  "name": "betaworld-website",
+  "name": "betaworld-server",
+  "preferGlobal": true,
   "version": "0.0.0",
-  "author": "Dallas John Slieker <dslieker@gmail.com>",
-  "description": "LifeOnBetaworld.com Website Generator",
-  "devDependencies": {
+  "author": "Def Method <bunchofbuzzards@gmail.com>",
+  "description": "LifeOnBetaworld.com Server",
+  "bin": {
+    "betaworld-server": "./binaries/betaworld-server.bin.js"
+  },
+  "scripts": {
+    "start": "nomen"
+  },
+  "main": "./lib/betaworld-server.lib.js",
+  "dependencies": {
+    "express": "3.4.x",
     "stylus": "0.38.x",
+    "nib": "1.0.x",
+    "lodash": "2.2.x",
+    "redis": "0.8.x",
+    "hiredis": "0.1.x",
+    "hamljs": "0.6.x",
+    "consolidate": "0.9.x",
     "jade": "0.35.x",
-    "gulp": "3.5.x",
-    "gulp-util": "2.2.x",
-    "gulp-jshint": "1.4.x",
-    "gulp-minify-css": "0.3.x",
-    "gulp-jade": "0.4.x",
-    "gulp-grunt": "0.4.x",
-    "grunt": "0.4.x",
-    "grunt-complexity": "0.1.x"
+    "marked": "0.3.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-jade": "^0.5.0",
+    "gulp-stylus": "^1.0.0",
+    "gulp-minify-html": "^0.1.3",
+    "gulp-uglify": "^0.2.1",
+    "nib": "^1.0.2",
+    "gulp-clean": "^0.2.4"
   }
 }
