@@ -159,8 +159,8 @@ body ol,
 body ul {
   font-family: 'VT323', cursive;
   line-height: 1.04em;
-  word-spacing: -0.1em;
-  letter-spacing: 0.001em;
+  word-spacing: 0em;
+  letter-spacing: 0em;
   text-shadow: 0.1em 0.1em #000;
   margin-bottom: 2em;
 }
