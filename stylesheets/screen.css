@@ -211,7 +211,7 @@ body > .chrome {
   z-index: 1;
 }
 body > .chrome > .header {
-  background-image: url("../resource_packs/betaworld/assets/minecraft/textures/gui/title/background/panorama_2.png");
+  background-image: url("../resource_packs/betaworld/assets/minecraft/textures/gui/title/background/panorama_0.png");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
