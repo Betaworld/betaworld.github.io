@@ -162,7 +162,7 @@ body ul {
   word-spacing: 0em;
   letter-spacing: 0em;
   text-shadow: 0.1em 0.1em #000;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 body p p,
 body ol p,
@@ -179,7 +179,7 @@ body ul ul {
 }
 body ol {
   list-style: decimal;
-  padding-left: 35px;
+  padding-left: 40px;
 }
 body ol li,
 body ul li {
