@@ -145,12 +145,13 @@ body h1 {
 }
 body h2 {
   font-size: 1.4em;
-  margin-top: 1em;
+  margin-top: 2em;
+  margin-bottom: 0.2em;
 }
 body h3 {
   color: #ffa341;
   font-size: 1.2em;
-  margin-top: 1em;
+  margin-bottom: 1em;
 }
 body h2,
 body h3,
