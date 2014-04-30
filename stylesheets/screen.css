@@ -142,23 +142,17 @@ body h6 {
 body h1 {
   font-size: 1.6em;
   margin-bottom: 1em;
+  margin-top: 1em;
 }
 body h2 {
   font-size: 1.2em;
-  margin-top: 2em;
+  margin-top: 4em;
   margin-bottom: 1em;
 }
 body h3 {
   color: #ffa341;
   font-size: 1em;
   margin-bottom: 1em;
-}
-body h2,
-body h3,
-body h4,
-body h5,
-body h6 {
-  text-align: center;
 }
 body p,
 body ol,
