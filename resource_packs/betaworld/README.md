@@ -37,6 +37,29 @@ Inspiration came from:
 
 --------------------------------------------------------------
 
+<<<<<<< HEAD
+=======
+0.1.5
+Numerous minor changes made!
+
+0.1.4
+-Bibliocraft lantern revamped again!
+-Bibliocraft lamp revamped!
+
+0.1.3
+-Ars Magica 2 Caster Rune has been revamped!
+-Ars Magica 2 Caster Rune side has been revamped!
+-Ars Magica 2 Lesser Staff has been added!
+-Ars Magica 2 Standard Staff has been added!
+-Ars Magica 2 Greater Staff has been added!
+-Ars Magica 2 Magitech Staff has been added!
+-Ars Magica 2 Crystal Wrench has been revamped!
+-Ars Magica 2 Moonstone Block has been revamped!
+-Ars Magica 2 Blue Topaz Block has been revamped!
+-Bibliocraft Monocle added!
+-Bibliocraft lantern revamped!
+
+>>>>>>> master
 0.1.2
 -Ars Magica 2 Vinteum Ore revamped and animated!
 -Ars Magica 2 Sunstone Ore revamped!
