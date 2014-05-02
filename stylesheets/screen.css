@@ -138,11 +138,12 @@ body h6 {
   margin-bottom: 1em;
   word-spacing: -0.5em;
   line-height: 1.2em;
+  display: block;
 }
 body h1 {
   font-size: 1.6em;
   margin-bottom: 2em;
-  margin-top: 1em;
+  padding-top: 2em;
 }
 body h2 {
   font-size: 1.2em;
@@ -195,7 +196,14 @@ body ul li:before {
 body p {
   margin-bottom: 1em;
 }
+body a {
+  color: #f00;
+  cursor: pointer;
+}
 body a,
+body em {
+  text-decoration: underline;
+}
 body strong {
   color: #ffa341;
 }
@@ -236,7 +244,7 @@ body > .chrome > .header section.logo img {
 body > .chrome > .header section.navigation {
   position: relative;
   top: 283px;
-  width: 144px;
+  width: 204px;
   margin-left: auto;
   margin-right: auto;
   height: 43.999999999999986px;
@@ -250,6 +258,8 @@ body > .chrome > .header section.navigation nav > :first-child {
 }
 body > .chrome > .header section.navigation nav > :first-child span {
   width: 42px;
+  position: relative;
+  left: 1px;
 }
 body > .chrome > .header section.navigation nav > :last-child {
   width: 42px;
@@ -257,6 +267,8 @@ body > .chrome > .header section.navigation nav > :last-child {
 }
 body > .chrome > .header section.navigation nav > :last-child span {
   width: 42px;
+  position: relative;
+  right: 1px;
 }
 body > .chrome > .header section.navigation nav a {
   text-indent: -9999px;
@@ -276,59 +288,70 @@ body > .chrome > .header section.navigation nav a span {
   width: 40px;
   position: relative;
 }
+body > .chrome > .header section.navigation nav a.installation span {
+  background-repeat: no-repeat;
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
+  background-position: center center;
+  background-image: url("../resource_packs/betaworld/assets/minecraft/textures/items/repeater.png");
+}
 body > .chrome > .header section.navigation nav a.guide span {
   background-repeat: no-repeat;
-  -webkit-background-size: 24px 24px;
-  -moz-background-size: 24px 24px;
-  background-size: 24px 24px;
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
   background-position: center center;
   background-image: url("../resource_packs/betaworld/assets/minecraft/textures/items/book_written.png");
 }
 body > .chrome > .header section.navigation nav a.constitution span {
   background-repeat: no-repeat;
-  -webkit-background-size: 24px 24px;
-  -moz-background-size: 24px 24px;
-  background-size: 24px 24px;
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
   background-position: center center;
   background-image: url("../resource_packs/betaworld/assets/minecraft/textures/items/paper.png");
 }
 body > .chrome > .header section.navigation nav a.government span {
   background-repeat: no-repeat;
-  -webkit-background-size: 24px 24px;
-  -moz-background-size: 24px 24px;
-  background-size: 24px 24px;
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
   background-position: center center;
   background-image: url("../resource_packs/betaworld/assets/minecraft/textures/items/apple_golden.png");
 }
 body > .chrome > .header section.navigation nav a.map span {
   background-repeat: no-repeat;
-  -webkit-background-size: 24px 24px;
-  -moz-background-size: 24px 24px;
-  background-size: 24px 24px;
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
   background-position: center center;
   background-image: url("../resource_packs/betaworld/assets/minecraft/textures/items/map_filled.png");
 }
 body > .chrome > .header section.navigation nav a.economy span {
-  background-repeat: no-repeat;
-  -webkit-background-size: 24px 24px;
-  -moz-background-size: 24px 24px;
-  background-size: 24px 24px;
-  background-position: center center;
+  -webkit-background-size: 32px 2464px;
+  -moz-background-size: 32px 2464px;
+  background-size: 32px 2464px;
+  background-position: center 0px;
   background-image: url("../resource_packs/betaworld/assets/minecraft/textures/items/diamond.png");
+  background-repeat: no-repeat;
+  height: 32px;
+  position: relative;
+  top: 5px;
 }
 body > .chrome > .header section.navigation nav a.npc span {
   background-repeat: no-repeat;
-  -webkit-background-size: 24px 24px;
-  -moz-background-size: 24px 24px;
-  background-size: 24px 24px;
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
   background-position: center center;
   background-image: url("../resource_packs/betaworld/assets/minecraft/textures/items/skull_steve.png");
 }
-body > .chrome > .header section.navigation nav a.factions span {
+body > .chrome > .header section.navigation nav a.nations span {
   background-repeat: no-repeat;
-  -webkit-background-size: 24px 24px;
-  -moz-background-size: 24px 24px;
-  background-size: 24px 24px;
+  -webkit-background-size: 32px 32px;
+  -moz-background-size: 32px 32px;
+  background-size: 32px 32px;
   background-position: center center;
   background-image: url("../resource_packs/betaworld/assets/minecraft/textures/items/stone_sword.png");
 }
@@ -348,7 +371,7 @@ body > .chrome > .footer > .information {
   color: #666;
   text-align: center;
   font-size: 0.7em;
-  max-width: 896px;
+  max-width: 3584px;
   margin-left: auto;
   margin-right: auto;
   padding: 16px;
@@ -454,7 +477,7 @@ body > .chrome > .body > article.document > section.page > section.body {
   background: -ms-linear-gradient(top, rgba(0,0,0,0.65), rgba(0,0,0,0.65));
   background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0.65));
   padding: 32px;
-  padding-bottom: 2em;
+  padding-top: 0;
 }
 body > .chrome > .body > article.document > section.page > section.body > article > p > img {
   width: 100%;

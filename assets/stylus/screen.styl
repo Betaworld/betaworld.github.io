@@ -14,9 +14,9 @@ resource_pack = betaworld
 //resource_pack = smoothic
 //resource_pack = Ovo
 
-original-block-size = 16px
+original-block-size = 64px
 
-block-scale = 2
+block-scale = 0.5
 
 block-size = original-block-size * block-scale
 
@@ -36,15 +36,27 @@ widget-cap-width = widget-size / 12.19047619047619 /* Official proportions, don'
 block-path(blockName)
   return '../resource_packs/' + resource_pack + '/assets/minecraft/textures/blocks/' + blockName + '.png'
 
+item-path(itemName)
+  return '../resource_packs/' + resource_pack + '/assets/minecraft/textures/items/' + itemName + '.png'
+
 block(blockName)
   background-size block-size block-size
   background-image url(block-path(blockName))
 
+itemAnimated(itemName, number-of-frames)
+  background-size (block-size) (block-size * number-of-frames)
+  background-position center 0px
+  background-image url(item-path(itemName))
+  background-repeat no-repeat
+  height block-size
+  position relative
+  top 5px
+
 item(itemName)
   background-repeat no-repeat
-  background-size (original-block-size * 1.5) (original-block-size * 1.5)
+  background-size (block-size) (block-size)
   background-position center center
-  background-image url('../resource_packs/' + resource_pack + '/assets/minecraft/textures/items/' + itemName + '.png')
+  background-image url(item-path(itemName))
 
 linear-shadow(startOpacity, endOpacity)
   background linear-gradient(top, rgba(0,0,0,startOpacity), rgba(0,0,0,endOpacity))
@@ -97,11 +109,12 @@ body
     margin-bottom 1em
     word-spacing -0.5em
     line-height 1.2em
+    display block
 
   h1
     font-size 1.6em
     margin-bottom 2em
-    margin-top 1em
+    padding-top 2em
 
   h2
     font-size 1.2em
@@ -151,7 +164,14 @@ body
   p
     margin-bottom 1em
 
-  a, strong
+  a
+    color red
+    cursor pointer
+
+  a, em
+    text-decoration underline
+
+  strong
     color #E1700E + #333
 
   a:hover
@@ -187,7 +207,7 @@ body
         top 283px
         //left 50%
         //bottom block-size
-        width 144px
+        width 204px
         margin-left auto
         margin-right auto
         height widget-height
@@ -205,11 +225,16 @@ body
             background-position 0 0
             span
               width widget-cap-width
+              position relative
+              left 1px
+
           > :last-child
             width widget-cap-width
             background-position - (widget-cap-width + (widget-width * 7)) 0
             span
               width widget-cap-width
+              position relative
+              right 1px
           a
             text-indent -9999px
             float left
@@ -225,6 +250,9 @@ body
               width widget-width
               position relative
 
+          a.installation
+            span
+              item('repeater')
 
           a.guide
             span
@@ -244,13 +272,13 @@ body
 
           a.economy
             span
-              item('diamond')
+              itemAnimated('diamond', 77)
 
           a.npc
             span
               item('skull_steve')
 
-          a.factions
+          a.nations
             span
               item('stone_sword')
 
@@ -331,7 +359,8 @@ body
           > section.body
             linear-shadow 0.65 0.65
             padding block-size
-            padding-bottom 2em
+            padding-top 0
+            //padding-bottom 2em
 
             > article > p > img
               width 100%
